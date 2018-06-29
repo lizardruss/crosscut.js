@@ -5,6 +5,7 @@
 .hg
 .npmrc
 .lock-wscript
+.nyc_output
 .svn
 .wafpickle-*
 config.gypi
