@@ -1,2 +1,2 @@
-export * from './sync_advices';
-export * from './async_advices';
+export * from './sync-advices';
+export * from './async-advices';

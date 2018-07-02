@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { Precondition } from '../core/join_point';
+import { Precondition } from '../core/join-point';
 import { MethodSelector, MemberSelector } from './selectors';
 import { weave } from '../core/weave';
 

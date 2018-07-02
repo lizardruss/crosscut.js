@@ -1,4 +1,4 @@
-import { JoinPoint } from './join_point';
+import { JoinPoint } from './join-point';
 import { Advice } from './advice';
 
 export class Pointcut {

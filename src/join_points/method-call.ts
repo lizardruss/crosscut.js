@@ -1,4 +1,4 @@
-import { Precondition, JoinPoint } from '../core/join_point';
+import { Precondition, JoinPoint } from '../core/join-point';
 import { Advice } from '../core/advice';
 import { Pointcut } from '../core/pointcut';
 import { AspectRegistry, Targets, Aspect } from '../core/aspect';
