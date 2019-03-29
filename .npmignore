@@ -3,6 +3,7 @@
 .DS_Store
 .git
 .hg
+.history
 .npmrc
 .lock-wscript
 .nyc_output

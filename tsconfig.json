@@ -6,17 +6,15 @@
     "declaration": true,
     "experimentalDecorators": true,
     "noImplicitAny": true,
-    "outDir": "./dist",
-    "lib": ["es2015", "dom"]
+    "baseUrl": "./lib",
+    "outDir": "./dist/",
+    "lib": ["es2015", "dom"],
   },
-  "files": [
-    "lib/index.ts",
-    "test/advices/sync_advices.spec.ts",
-    "test/advices/async_advices.spec.ts",
-    "test/core/pointcut.spec.ts",
-    "test/core/preconditions.spec.ts",
-    "test/core/wove.spec.ts",
-    "demo/index.ts"
+  "include": [
+    "lib/**/*.ts"
+  ],
+  "exclude": [
+    "test**/*.ts"
   ],
   "angularCompilerOptions": {
     "skipTemplateCodegen": true
