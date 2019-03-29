@@ -7,10 +7,10 @@ export abstract class Advice {
 
   public invoke(target: any, metadata: Metadata) {
     if (target.__woven__) {
-      return (metadata.method.result = target.bind(this.context, metadata).apply(null, metadata.method.args));
+      metadata.method.result = target.bind(metadata.method.context, metadata).apply(null, metadata.method.args);
+    } else {
+      metadata.method.result = target.apply(metadata.method.context, metadata.method.args);
     }
-
-    metadata.method.result = target.apply(metadata.method.context, metadata.method.args);
 
     return metadata.method.result;
   }
@@ -23,10 +23,10 @@ export abstract class AsyncAdvice {
 
   public async invoke(target: any, metadata: Metadata) {
     if (target.__woven__) {
-      metadata.method.result = await target.bind(this.context, metadata).apply(null, metadata.method.args);
+      metadata.method.result = await target.bind(metadata.method.context, metadata).apply(null, metadata.method.args);
+    } else {
+      metadata.method.result = await target.apply(metadata.method.context, metadata.method.args);
     }
-
-    metadata.method.result = await target.apply(metadata.method.context, metadata.method.args);
 
     return metadata.method.result;
   }

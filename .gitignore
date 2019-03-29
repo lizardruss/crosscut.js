@@ -31,3 +31,4 @@ dist
 .vscode
 .nyc_output
 .npmrc
+.history
